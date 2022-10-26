@@ -46,6 +46,7 @@ function createDivsForColors(colorArray) {
 
     // give it a class attribute for the value we are looping over
     newDiv.classList.add(color);
+    newDiv.classList.add('card');
 
     // call a function handleCardClick when a div is clicked on
     newDiv.addEventListener("click", handleCardClick);
@@ -113,6 +114,19 @@ function handleCardClick(event) {
     }
   }
 }
+
+//Need to add the event listener for the reset button.
+resetButton.addEventListener("click", function(){
+  const allDivs = document.querySelectorAll('.card')
+  for(singleDiv of allDivs){
+    singleDiv.remove();
+  }
+  createDivsForColors(shuffle(shuffledColors));
+  card1 = null;
+  card2 = null;
+  gameCount = 0;
+  gamePlays = 0;
+})
 
 // when the DOM loads
 createDivsForColors(shuffledColors);
