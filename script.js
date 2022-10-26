@@ -1,4 +1,5 @@
 const gameContainer = document.getElementById("game");
+const resetButton = document.getElementById("reset");
 
 const COLORS = [
   "red",
