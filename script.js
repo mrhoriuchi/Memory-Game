@@ -127,6 +127,7 @@ resetButton.addEventListener("click", function(){
   card2 = null;
   gameCount = 0;
   gamePlays = 0;
+  document.getElementById('gamePlays').innerText = 0;
 })
 
 // when the DOM loads
